@@ -1,0 +1,78 @@
+GitHub:
+  - Recommended to add a license (e.g. Apache v2, MIT, etc.) 
+  - GitHub has a page that talks about the license in depth
+
+Adding a readme:
+  - Descriptive text of what the repo is 
+  - Can click on the link "README" on empty repo
+  - Takes you to a text editor
+  - .md: markdown file. Includes easy to use syntax 
+  - ["text"]("link") - Without the quotes. This allows you to write a link on your readme.md file
+  - "#": is a heading
+  - "##": makes it a smaller header
+
+Adding a gitignore file:
+  - gitignore file must start with a "." (i.e. .gitignore)
+  - From your repository, there is a "+" button that allows you to create a new file
+  - In the field where you enter the file name, enter ".gitignore" without the quotations
+  - Can use a template. Pop-up drop-down menu shows up on the right
+  - git/github ignores files or directories that are listed in this file
+  - "#": is a comment
+  - gist: can save your own code snippets which become public
+    - Lots of gitignore files
+    
+Editing Files:
+  - Open: open the file in the GitHub client you have installed
+  - Edit: Opens the file in the GitHub editor
+  - Raw: opens the file in the browser
+  - Blame: Shows the last commit and who committed it
+  - History: Shows the previous commits
+  - Delete: Deletes the file
+
+Cloning repo locally:
+  - Can copy the link and in terminal, git clone command to pull down entire repo
+  - Clone in desktop (easier method): 
+    - Pop-up: What do you want to clone it as? And where do you want to clone it?
+    - Specify where you want to clone the repo, and click clone
+    - Pulling it in as a local repository
+  - Download ZIP: downloads all the files in the repo into a zip file. But not tied in any way to the repo
+  
+Deleting a remote repo:
+  - Go to settings
+  - Scroll to Danger Zone
+  - Delete this repository
+  - Local repository is not affected. You can push it back as a remote repository
+  - GitHub is not tracking the repo anymore
+  - If you want to delete the files/directories, you need to locally delete all the files/directories
+  
+Adding collaborators in GitHub:
+  - Forking: copying a public repository
+  - Can make changes, update, and pull request
+  - Adding collaborators give read and write access to a repo to the collaborator
+  - Go to settings, collaborators tab and search for username of potential collaborator and add
+  
+Adding commit comments:
+  - Can go to previous commits and click the line to add a comment
+  - Good for commit reviews
+ 
+Adding new issues:
+  - At GitHub repo page, click issues
+  - Milestones: goal created to resolve issues. (e.g. 4 to 5 issues resolved equals one milestone)
+  - Labelling: can label issues to make it easier to understand the issue
+    - Can create custom labels
+  - Create new issue by clicking the green "New Issue" button
+    - Write a subject and description of the issue and submit it
+  - Currently on GitHub, once you create an issue, it can NEVER be deleted!!!
+
+Managing issues:
+  - Comment will be added if someone responds to your issue
+  - Can close the issue after it is resolved. But others can reopen the issue
+  
+Working as a collaborator:
+  - Clone the repo
+  - Create a new branch. Do not work on the master branch
+  - Make your changes to files, directories
+  - Commit changes
+ 
+Making a pull request:
+  - 
