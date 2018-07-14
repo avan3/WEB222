@@ -1,0 +1,108 @@
+Git Tutorial
+  - Bash works the same as the linux commands (i.e. mkdir, cd, rm, pwd, etc.)
+
+To create repo:
+  - Cd into the directory you want to be the repo
+  - git init
+
+To check current status of repo:
+  - git status
+
+To add files and remove files
+  - git add “filename”
+  - git rm “filename”
+
+To make a commit, after adding files to staging area
+  - Using Vim editor
+    - git commit 
+    - Brings you to Vim editor
+    - Write a message for the commit
+    - Press ‘esc’ to get out of insert mode
+    - Type :wq to save and exit
+  - Using just one command line
+    - git commit –m “type your message here”
+  - Without having to add files before committing,
+    - git commit -a -m "type your message here"
+
+To check differences between commits,
+  - git diff
+  - Will show 2 versions, older is "a" and "---". Newer is "b" and "+++"
+  - Once git add "filename" (staging), git diff won't work. Have to do "git diff --staged" 
+  - For larger amount of modifications on a file, would be easier to get a text editor to check the differences between files
+
+Branching
+  - Creating a branch off of the master and able to modify and commit without affecting the master
+  - Can merge back into the master branch, or delete it altogether
+
+Creating a branch in git,
+  - git branch "branch name"
+ 
+ Switching between multiple branches
+  - git doesn't switch to the branch automatically when branch is created
+  - git checkout "branch name" --> moves over to the branch that you specified
+
+To create new branch and move into it right away,
+  - git checkout -b "branch name"
+
+To see all branches, 
+  - git branch 
+  - Shows all branches and which branch you are currently on
+  - git status will show you your current branch but not other branches
+
+Updating branches,
+  - Make sure to save files you worked on before commit as git will only commit the last saved state of the file
+  - Same thing as adding and committing 
+  - The difference is commiting a branch will not affect the files in the master branch
+
+Merging
+  - Make sure both branches you want to merge are clean (i.e. there are no pending changes)
+  - git status to check, and git checkout "branch name" to change to other branch
+  - Branch you are in is going to receive the changes
+  - git merge "branch name" 
+  - git goes back to the last common ancestor where the new branch connected to the master
+  - Shows the hashes (address of the commit) from the two commits
+  - If the master branch has no changes and you are merging a branch to master, fast forward
+    - Commit from branch moves in front for the commit for the master
+
+Merging with two branches that are modified that don't necessarily have the same changes in it
+  - Merge like before with git merge "branch name" from the branch you want to receive the changes
+  - Goes to Vim editor --> type in message --> :wq to save and exit
+  - git will add the new content from the branch we just committed with the content from master that the branch did not have 
+  - Simply, git adds everything together
+  - Recursive merge: Pulls information from both branches. Gives you most current version of each and keeps those changes
+  
+Conflicts that arise with merging
+  - Conflicts arise when edits occur in a file in both branches you are merging (e.g. Edits in the same line of code for both files)
+  - When you try to merge, git will know and a conflict arises; git cannot fix the conflict with automated means and tells you to fix the conflict then commit
+  - git injected two versions into the file as shown by <<<< "Version 1 Code" ====== "Version 2 Code" >>>> 
+  - When conflict is manually fixed, can merge with git commit -a -m "type your message here"
+
+To check if a branch has been merged,
+  - git branch --merged
+    - Shows all the branches that have been merged at some point. Not necessarily that they are currently merged
+To check if a branch has not been merged,
+  - git branch --no-merge
+  - Shows the branches that have not been merged
+
+To delete branches,
+  - git branch -d "branch name"
+  - Check it has been deleted with git branch
+  - Branch may not be able to be deleted because it has not been merged yet
+  - To force git to delete a branch (regardless if it was merged or not), git branch -D "branch name"
+  - The difference is the upper-case D vs. the lower-case d
+
+To add a remote repository,
+  - Copy the url from the remote repository
+  - git remote add "Reference name for repository" "ctrl+v url" 
+  - Reference name: "origin" is the standard default name used for the master branch of the remote repository
+  - And paste the copied url next after adding the reference name "origin"
+  - git remote add origin "url"
+  - Then git push -u origin master
+    - "-u": upstream. 
+    - Origin is the remote branch that we are pushing to. 
+    - Master is the branch we are pushing.
+  - git asks for username and password. Enter your credentials
+    
+  
+  
+  
