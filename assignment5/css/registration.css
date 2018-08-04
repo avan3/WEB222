@@ -1,0 +1,69 @@
+/* Registration */
+
+.content {
+    width: 55%;
+}
+
+h3 {
+    margin: 15px 15px 5px;
+}
+.content div {
+    margin-left: -1.6em; 
+    margin-right: 2em;
+    margin-left: 20px;
+    display: inline-block;
+}
+.content div+div {
+    margin-top: 0.6em;
+    margin-left: 20px;
+}
+.content label {
+    width: 150px;
+    display: block;
+    text-align: left;
+}
+
+.content input {
+    width: 180px;
+}
+
+/* Registration Submit and Clear */
+#moveInput {
+    text-align: center;
+    width: 90%;
+}
+
+#moveInput input {
+    width: 120px;
+    margin: 25px 0;
+}
+
+.column {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    float: left;
+}
+
+/* Validation Box */
+#errorcolumn {
+    width: 45%;
+    margin: 15px 0;
+    display: none;
+}
+
+#errors {
+    overflow: hidden;
+    float: left;
+    text-align: left;
+}
+#errorTitle {
+    margin-left: 52px;
+    float: left;
+}
+
+#errors img {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+}

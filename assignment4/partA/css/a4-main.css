@@ -1,0 +1,57 @@
+/* Place all of your CSS Code in this file */
+
+/********************************************************************************* 
+*
+* WEB222 – Assignment #4a
+*
+* I declare that this assignment is my own work in accordance with Seneca 
+* Academic Policy. No part of this assignment has been copied manually or 
+* electronically from any other source (including web sites) or distributed to 
+* other students. 
+* 
+* Name: _____Andrew Van_______ Student ID: ___141267179___ Date: __2018-07-06___ 
+* 
+********************************************************************************/
+body {
+    color: #800000;
+}
+
+nav, footer {
+    background-color: #800000;
+}
+
+header {
+    background-color: rgba(128, 0, 0, 0.1);
+    padding: 1px;
+}
+
+h1.app-title {
+    font-family: Lobster;
+    font-size: 3.0em;
+    font-weight: bold;
+}
+
+div.main-table-container {
+    height: 60vh;
+    overflow: auto;
+}
+
+table.main-table-top th {
+    border: 1px solid #999999;
+    background-color: rgba(128, 0, 0, 0.1);
+    height: 35px;
+    text-align: left;
+    padding: 0px 12px 0px 10px;
+}
+
+table.main-table tbody td {
+    border: 1px solid #999999;
+    padding: 11px;
+    vertical-align: top;
+    background-color: #eeeeee;
+}
+
+table.main-table p span {
+    font-weight: bold;
+    font-style: italic;
+}
