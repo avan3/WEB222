@@ -1,0 +1,39 @@
+/* Contact */
+h2 {
+    padding-bottom: 0;
+}
+
+/* Size of entire content */
+.content {
+    width: 90%;
+    height: 400px;
+    min-width: 700px;
+}
+
+/* Container for the inner content */
+#contact {
+    float: left;
+    width: 46.5%;
+    margin-bottom: 25px;
+}
+
+.content p {
+    text-align: center;
+}
+
+/* Align table to center of parent div */
+#hours {
+    margin: 0 auto;
+}
+
+/* Google Map */
+#map {
+    height: 85.9%;
+    border: 1px solid #17252A;
+    width: 49%;
+    margin-top: 30px;
+}
+
+/* Open Stret Maps */
+
+/* https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap */
