@@ -1,0 +1,179 @@
+<!-- 
+I declare that my assignment is wholly my own work in accordance with Seneca 
+Academic Policy. No part of this assignment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructor and / or made available in this assignment for my use. 
+I also declare that no part of this assignment has been distributed to other students. 
+Name: Andrew Van
+Dated: July 30, 2018
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registration | NextScoop Cafe | Van</title>
+        <meta charset="utf-8">
+        <link href="css/normalize1.css" rel="stylesheet" type="text/css">
+        <link href="css/registration.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:800|Roboto" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+        <link rel="shortcut icon" href="css/logo.ico">
+        <script src="js/normalize1.js"></script>
+        <script src="js/registration.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <!-- HEADER -->
+            <header>
+                <div id="menuButton" onclick="showMenu()">
+                    <span id="1"></span>
+                    <span id="2"></span>
+                    <span id="3"></span>
+                </div>
+                <div>
+                    <a id="storeName" href="index.html"><img id="logo" src="css/logo.png" alt="Ice Cream">nextscoop</a>
+                </div> 
+                <div class="signin">
+                    <button class="button" type="button" onclick="showLogin()">Sign In</button>
+                </div>
+                <div class="signout">
+                    <button class="button" type="button" onclick="logout()">Sign Out</button>
+                </div>
+                <div id="welcome"></div>
+            </header>
+            <!-- NAVIGATION -->
+            <nav class="navigation">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- SIGN IN SECTION -->
+            <section>
+                <form class="form" method="POST" action="#" onsubmit="return signin();">
+                    <h2>Login to your account</h2>
+                    <div>
+                        <div class="aside">
+                            <input id="checkbox" type="checkbox" name="checkbox" value="1">
+                            <span>Remember Me?</span>
+                            <br>
+                            <input class="login" name="login" type="submit" value="login">
+                        </div>
+                        <p>Username</p>
+                        <input id="User" size="20" maxlength="20" name="username" placeholder="Your username" required
+                        title="Username must start with a letter, and have at least 6 characters!"
+                        pattern="^([a-zA-Z]+)[a-zA-Z\d]{5,}$">
+                    </div>
+                    <div>
+                        <p>Password</p>
+                        <input id="Pass" type="password" name="password" placeholder="Your password" required
+                        title="Password must be 8 characters long, start with a character, and have at least 1 digit and 1 uppercase!" 
+                        pattern="^(?=.*[A-Z])[a-zA-Z]+(?=.*\d)[A-Za-z\d]{7,}$">
+                    </div>
+                    <div class="center">
+                        Don't have an Account? <a id="register" href="registration.html">Register Here!</a>
+                    </div>
+                </form>
+            </section>
+            <!-- REGISTRATION SECTION -->
+            <section>
+                <form class="content" name="signup" method="POST" action="https://httpbin.org/post" onsubmit="return formValidation();">
+                    <h3>become a member</h3>
+                    <section class="column">
+                    <h4>Personal Information</h4>
+                    <div>
+                        <label for="username">Username: </label>
+                        <input id="username" size="20" maxlength="20" name="username" placeholder="Your username" autofocus required
+                        title="Username must start with a letter, and have at least 6 characters!">
+                    </div>
+                    <div>
+                        <label for="firstname">First Name: </label>
+                        <input id="firstname" size="20" name="firstname" placeholder="Your first name" required
+                        title="First name must only contain letters!">
+                    </div>
+                    <div>
+                        <label for="password">Password: </label>
+                        <input id="password" type="password" size="20" name="password" placeholder="Your password" required
+                        title="Password must be 8 characters long, start with a character, and have at least 1 digit and 1 uppercase!">
+                    </div>
+                    <div>
+                        <label for="lastname">Last Name: </label>
+                        <input id="lastname" size="20" name="lastname" placeholder="Your last name" required
+                        title="Last name must only contain letters!">
+                    </div>
+                    <div>
+                        <label for="password">Re-enter Password: </label>
+                        <input id="reenter" type="password" size="20" name="password" placeholder="Re-enter Password" required
+                        title="Password must same as the password above!">
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number: </label>
+                        <input id="phone" type=tel size="20" maxlength="12" name="phone" placeholder="Your phone number" required
+                        title="Phone number must be in following format: ###-###-###" pattern="^\d{3}-\d{3}-\d{4}$">
+                    </div>
+                    </section>
+                    <section class="column">
+                    <h4>Shipping Information</h4>
+                    <div>
+                        <label for="streetnumber">Street Number: </label>
+                        <input id="streetnumber" maxlength="6" name="streetnumber" placeholder="Your street number" required
+                        title="Street Number must only contain numbers! Include unit number with a hypen! e.g. 2-27" 
+                        pattern="^([\d]+)[-]*[\d]*$">
+                    </div>
+                    <div>
+                        <label for="streetname">Street Name: </label>
+                        <input id="streetname" size="20" name="streetname" placeholder="Your street name" required
+                        title="Street Name must only contain letters!">
+                    </div>
+                    <div>
+                        <label for="city">City: </label>
+                        <input id="city" size="20" name="city" placeholder="Your city" required
+                        title="City must only contain letters!">
+                    </div>
+                    <div>
+                        <label for="province">Province: </label>
+                        <select id="province" name="province">
+                            <option value="1">Alberta</option>
+                            <option value="2">British Columbia</option>
+                            <option value="3">Manitoba</option>
+                            <option value="4">New Brunswick</option>
+                            <option value="5">Newfoundland &amp; Labrador</option>
+                            <option value="6">Nova Scotia</option>
+                            <option value="7" selected>Ontario</option>
+                            <option value="8">Prince Edward Island</option>
+                            <option value="9">Quebec</option>
+                            <option value="10">Saskatchewan</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="postal">Postal Code: </label>
+                        <input id="postal" size="20" maxlength="6" name="postal" placeholder="Your postal code" required
+                        title="Postal Code must have following format e.g. C1A1A7" pattern="^[a-zA-Z][0-9][a-zA-Z][0-9][a-zA-Z][0-9]$">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" size="20" maxlength="20" name="email" placeholder="Your e-mail address" required>
+                    </div>
+                    </section>
+                    <section id="errorcolumn">
+                            <h2 id="errorTitle">Oh no! You have errors!</h2>
+                            <div id="errors"></div>
+                    </section>
+                    <!-- SUBMIT AND CLEAR BUTTONS -->
+                    <div id="moveInput">
+                        <input class="login" type="submit" name="submit" value="Submit">
+                        <input class="login" type="reset" name="reset" value="Clear">
+                    </div>
+                    <input type="hidden" name="Van" id="Van" value="Van" /> 
+                    <input type="hidden" name="141267179" id="141267179" value="141267179" /> 
+                </form>
+            </section>
+            <!-- FOOTER -->
+            <footer class="footer">
+                <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+                <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+            </footer>
+            <div id="popupbg" onclick="closeLogin()"></div>
+        </div>
+    </body>
+</html>

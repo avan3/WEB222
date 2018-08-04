@@ -1,0 +1,305 @@
+/* Containers */
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #3aafa9;
+    height: 671px;
+}
+
+#container {
+    min-width: 740px;
+    height: 100%;
+}
+
+/* Header */
+header {
+    overflow: hidden;
+    margin: 5px 0px 2px 0px;
+}
+
+/* Hamburger Icon */ 
+#menuButton {
+    float: left;
+    margin: 13px 13px 13px 0px;
+}
+
+#menuButton span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #feffff;
+    border-radius: 3px;
+}
+
+/* Menu button turn into X */
+.rotate45 {
+    transform: rotate(45deg);
+    top: 9px;
+    left: 1px;
+  }
+
+.hide {
+    width: 0%;
+    opacity: 0;
+}
+
+.rotate-45 {
+    transform: rotate(-45deg);
+    top: -9px;
+    left: 1px;
+}
+
+/* Logo */
+#logo {
+    height: 50px;
+    width: 50px;
+    float: left;
+    padding: 0px 7px 7px 0px;
+} 
+
+/* Store Name */
+#storeName {
+    font-family: 'Poppins', 'sans-serif';
+    color: #feffff;
+    font-size: 2em;
+    float: left;
+    text-decoration: none;
+}
+
+/* Sign In Button */
+.signin {
+    margin: 13px 0px 13px 13px;
+    float: right;
+}
+
+.signout {
+    margin: 13px 0px 13px 13px;
+    display: none;
+}
+
+#welcome {
+    font-family: 'Roboto', sans-serif;
+    color: #feffff;
+    float: right;
+    margin: 5px 10px 0px;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #17252A;
+    font-family: 'Roboto', 'sans-serif';
+    color: #feffff;
+    float: right;
+    border: none;
+    border-radius: 20px;
+    width: 90px;
+    padding: 5px 10px;
+}
+
+#button:hover {
+    background-color: rgb(12, 18, 20);
+    color: #feffff;
+}
+
+#button:active {
+    background-color: #2b7a78;
+    color: #17252A;
+}
+
+/* Navigation */
+.menu {
+    width: 250px;
+    background-color: #feffff;
+    list-style-type: none;
+    position: absolute;
+    display: none; /* Initially display none */
+    margin-top: 0px;
+    padding-left: 0;
+    border: 1px solid #17252A;
+    border-bottom-right-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+    border-top: 0;
+    z-index: 1000;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: #17252A;
+    padding: 22px 30px;
+    display: block;
+    text-align: center;
+    border-top: 1px solid #17252A;
+}
+
+.menu a:hover {
+    background-color: #def2f1;
+}
+
+.menu a:active {
+    color: #feffff;
+    background-color: #2b7a78;
+}
+
+/* Section Content */
+.content {
+    padding: 1em;
+    width: 500px;
+    margin: 0px auto;
+    background-color: #feffff;
+    border: 1px solid #17252A;
+    border-radius: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+/* Sign In Form */
+.form {
+    padding: 1.2em;
+    width: 335px;
+    background-color: #feffff;
+    border-radius: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    border: 1px solid #17252A;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.form input {
+    padding: 2px 0px;
+    border: 1px solid #888888;
+}
+
+/* Remember me and login button */
+.aside { 
+    float: right;
+    margin-top: 20px;
+}
+
+/* Don't have an account? */
+.center {
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* Login button */
+.login {
+    width: 120px;
+    height: 35px;
+    margin: 15px 0px 0px 12px;
+    background-color: #17252A;
+    color: #feffff;
+    border: none;
+    font-family: 'Poppins', cursive;
+}
+
+/* Username and Password move up a bit */
+div>p {
+    margin: 3px 0;
+}
+
+/* Change colour for Regisration link */
+#register {
+    text-decoration: none;
+    color: #3aafa9;
+}
+
+#register:hover {
+    color: #17252A;
+}
+
+#register:active {
+    color: #def2f1;
+}
+
+/* Footer */
+.footer {
+    margin: 5px auto;
+    display: table;
+    clear: both;
+}
+
+/* Social Media Icons */
+.fa {
+    padding: 7px;
+    font-size: 20px;
+    width: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 3px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: #ffffff;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: #ffffff;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: #ffffff;
+}
+
+/* Other CSS */
+#popupbg {
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 999;
+}
+
+h1 {
+    font-family: 'Poppins', cursive;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 10px auto;
+}
+
+h2 {
+    font-family: 'Poppins', cursive;
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Poppins', cursive;
+    margin: 15px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+h4 {
+    font-family: 'Poppins', cursive;
+    margin: 10px 0px -5px;
+    font-size: 1.3em;
+    text-align: center;
+}
+.show {
+    display: block; /* Use js to change display */
+}
