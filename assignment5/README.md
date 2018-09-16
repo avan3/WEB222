@@ -5,10 +5,10 @@ Using HTML, CSS, Javascript
 
 ## Preview
 
-###Contact Page
+### Contact Page
 
 ![alt text](css/nextscoop.jpg)
 
-###Registration page with validation
+### Registration page with validation
 
 ![alt text](css/validation.jpg)
